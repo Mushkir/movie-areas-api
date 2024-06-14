@@ -1,4 +1,5 @@
 import express from "express";
+import movieRoutes from "./routes/movies.route.js";
 
 
 const app = express();
@@ -10,25 +11,8 @@ app.get('/', (req, res) => {
 })
 
 // CRUD functionality of movies.
-// 1. R - Read all movies
-app.get('/movies', (req, res) => {
+app.use('/movies', movieRoutes);
 
-})
-
-// 2. C - For creating / adding movies.
-app.post('/movies', () => {
-
-})
-
-// 3. U - For updating movie.
-app.put('/movies/:id', () => {
-
-})
-
-// D - For delete movie.
-app.delete('/movies/:id', () => {
-
-})
 
 
 app.listen(PORT, () => {
