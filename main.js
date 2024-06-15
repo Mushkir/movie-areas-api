@@ -6,6 +6,9 @@ import connectDB from "./lib/db.js";
 const app = express();
 const PORT = 6969;
 
+// When sending the request body to server (API), it can't undersatnd the json format request.
+// So we need to use middleware to parse the json format request.
+app.use(express.json())
 
 connectDB();
 

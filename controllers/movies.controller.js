@@ -5,7 +5,10 @@ export const MovieIndex = (req, res) => {
 
 // Add new movie details
 export const MovieCreate = (req, res) => {
-    res.send("Add movie details");
+    // id, title, desc
+    console.log(req.body);
+
+    return res.json(req.body)
 }
 
 // Update Movie detail
